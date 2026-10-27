@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<experiments>
+  <experiment name="sweep" repetitions="10" sequentialRunOrder="true" runMetricsEveryStep="false" timeLimit="300">
+    <setup>random-seed behaviorspace-run-number setup</setup><go>go</go>
+    <metrics><metric>giant-component-size / count turtles</metric><metric>count turtles</metric></metrics>
+    <constants>
+      <enumeratedValueSet variable="layout?"><value value="false"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="team-size"><value value="4"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="max-downtime"><value value="40"></value></enumeratedValueSet>
+      <steppedValueSet variable="p" first="0" step="10" last="100"></steppedValueSet>
+      <steppedValueSet variable="q" first="0" step="20" last="100"></steppedValueSet>
+    </constants>
+  </experiment>
+  <experiment name="snap" repetitions="1" sequentialRunOrder="true" runMetricsEveryStep="false" timeLimit="300">
+    <setup>random-seed 11 setup</setup><go>go</go>
+    <metrics><metric>[ (list who incumbent?) ] of turtles</metric><metric>[ (list [who] of end1 [who] of end2 color) ] of links</metric><metric>giant-component-size / count turtles</metric></metrics>
+    <constants>
+      <enumeratedValueSet variable="layout?"><value value="false"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="team-size"><value value="4"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="max-downtime"><value value="40"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="p"><value value="20"></value><value value="45"></value><value value="70"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="q"><value value="65"></value></enumeratedValueSet>
+    </constants>
+  </experiment>
+</experiments>

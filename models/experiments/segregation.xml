@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<experiments>
+  <experiment name="seg" repetitions="1" sequentialRunOrder="true" runMetricsEveryStep="true" timeLimit="200">
+    <setup>random-seed 42 setup</setup>
+    <go>go</go>
+    <metrics>
+      <metric>percent-similar</metric>
+      <metric>percent-unhappy</metric>
+      <metric>[ (list pxcor pycor color) ] of turtles</metric>
+    </metrics>
+    <constants>
+      <enumeratedValueSet variable="density"><value value="95"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="%-similar-wanted"><value value="30"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="visualization"><value value="&quot;square-x&quot;"></value></enumeratedValueSet>
+    </constants>
+  </experiment>
+</experiments>

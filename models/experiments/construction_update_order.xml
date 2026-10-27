@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<experiments>
+  <experiment name="cons" repetitions="200" sequentialRunOrder="true" runMetricsEveryStep="true" timeLimit="1000">
+    <setup>random-seed behaviorspace-run-number setup</setup><go>go</go>
+    <exitCondition>disagreement &lt; 0.01</exitCondition>
+    <metrics><metric>team-mean</metric><metric>disagreement</metric></metrics>
+    <constants><enumeratedValueSet variable="team-size"><value value="6"></value></enumeratedValueSet>
+    <enumeratedValueSet variable="mu"><value value="0.3"></value></enumeratedValueSet>
+    <enumeratedValueSet variable="update-order"><value value="&quot;one pair at a time&quot;"></value><value value="&quot;everyone at once&quot;"></value></enumeratedValueSet>
+    <enumeratedValueSet variable="stop-rule"><value value="&quot;until agreement&quot;"></value></enumeratedValueSet>
+    <enumeratedValueSet variable="initialization"><value value="&quot;spread evenly&quot;"></value></enumeratedValueSet></constants>
+  </experiment>
+</experiments>

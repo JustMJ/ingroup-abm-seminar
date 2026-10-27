@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<experiments>
+  <experiment name="gr" repetitions="30" sequentialRunOrder="true" runMetricsEveryStep="false" timeLimit="20000">
+    <setup>random-seed behaviorspace-run-number setup</setup><go>go</go>
+    <exitCondition>done-at &gt; 0</exitCondition>
+    <metrics><metric>done-at</metric></metrics>
+    <constants>
+      <enumeratedValueSet variable="processing-skill"><value value="&quot;high&quot;"></value><value value="&quot;moderate&quot;"></value><value value="&quot;low&quot;"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="communication"><value value="&quot;slowest learner speaks twice as often&quot;"></value><value value="&quot;all members equally&quot;"></value><value value="&quot;fastest learner speaks twice as often&quot;"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="specialization"><value value="&quot;low (33% unique)&quot;"></value><value value="&quot;moderate (50% unique)&quot;"></value><value value="&quot;high (66% unique)&quot;"></value></enumeratedValueSet>
+    </constants>
+  </experiment>
+</experiments>

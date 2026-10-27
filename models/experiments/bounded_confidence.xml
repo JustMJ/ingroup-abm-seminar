@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<experiments>
+  <experiment name="bc" repetitions="1" sequentialRunOrder="true" runMetricsEveryStep="true" timeLimit="300">
+    <setup>random-seed 7 setup</setup>
+    <go>go</go>
+    <metrics>
+      <metric>number-of-clusters</metric>
+      <metric>[ (list who opinion) ] of turtles</metric>
+    </metrics>
+    <constants>
+      <enumeratedValueSet variable="number-of-agents"><value value="200"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="mu"><value value="0.3"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="threshold"><value value="0.5"></value><value value="0.15"></value></enumeratedValueSet>
+    </constants>
+  </experiment>
+</experiments>

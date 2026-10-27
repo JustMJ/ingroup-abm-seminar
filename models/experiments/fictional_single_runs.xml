@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<experiments>
+  <experiment name="w" repetitions="1" sequentialRunOrder="true" runMetricsEveryStep="true" timeLimit="50">
+    <setup>random-seed 1 setup</setup><go>go</go>
+    <exitCondition>all? turtles [ informed? ]</exitCondition>
+    <metrics><metric>[who] of turtles with [informed?]</metric></metrics>
+    <constants>
+      <enumeratedValueSet variable="telling-rule"><value value="&quot;tell all neighbors&quot;"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="structure"><value value="&quot;wheel&quot;"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="team-size"><value value="6"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="transmission-p"><value value="0.9"></value></enumeratedValueSet>
+    </constants>
+  </experiment>
+  <experiment name="c" repetitions="1" sequentialRunOrder="true" runMetricsEveryStep="true" timeLimit="50">
+    <setup>random-seed 33 setup</setup><go>go</go>
+    <exitCondition>all? turtles [ informed? ]</exitCondition>
+    <metrics><metric>[who] of turtles with [informed?]</metric></metrics>
+    <constants>
+      <enumeratedValueSet variable="telling-rule"><value value="&quot;tell all neighbors&quot;"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="structure"><value value="&quot;circle&quot;"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="team-size"><value value="6"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="transmission-p"><value value="0.9"></value></enumeratedValueSet>
+    </constants>
+  </experiment>
+</experiments>

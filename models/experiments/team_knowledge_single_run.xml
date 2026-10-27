@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<experiments>
+  <experiment name="g" repetitions="1" sequentialRunOrder="true" runMetricsEveryStep="true" timeLimit="4000">
+    <setup>random-seed 5 setup</setup><go>go</go>
+    <exitCondition>done-at &gt; 0</exitCondition>
+    <metrics><metric>pct-learned-by-all</metric><metric>pct-said-by-all</metric><metric>phase</metric></metrics>
+    <constants>
+      <enumeratedValueSet variable="processing-skill"><value value="&quot;moderate&quot;"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="communication"><value value="&quot;all members equally&quot;"></value><value value="&quot;slowest learner speaks twice as often&quot;"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="specialization"><value value="&quot;high (66% unique)&quot;"></value></enumeratedValueSet>
+    </constants>
+  </experiment>
+</experiments>

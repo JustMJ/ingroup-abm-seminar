@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<experiments>
+  <experiment name="sweep" repetitions="200" sequentialRunOrder="true" runMetricsEveryStep="false" timeLimit="5000">
+    <setup>random-seed behaviorspace-run-number setup</setup>
+    <go>go</go>
+    <exitCondition>all? turtles [ informed? ]</exitCondition>
+    <metrics><metric>ticks</metric></metrics>
+    <constants>
+      <enumeratedValueSet variable="telling-rule"><value value="&quot;tell all neighbors&quot;"></value><value value="&quot;tell one neighbor&quot;"></value></enumeratedValueSet>
+      <enumeratedValueSet variable="structure"><value value="&quot;wheel&quot;"></value><value value="&quot;circle&quot;"></value></enumeratedValueSet>
+      <steppedValueSet variable="team-size" first="4" step="1" last="12"></steppedValueSet>
+      <steppedValueSet variable="transmission-p" first="0.1" step="0.1" last="1"></steppedValueSet>
+    </constants>
+  </experiment>
+</experiments>
